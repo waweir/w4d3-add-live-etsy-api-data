@@ -1,0 +1,359 @@
+$orange: #f56400;
+$blue: rgb(1, 146, 181);
+$button-blue: #34a8c4;
+$gray: #666666;
+$tan: #f5f5f1;
+$border-color: #E1E3DF;
+$green: #7bc146;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+img {
+    width: 100%;
+}
+.border {
+    border: 2px solid black;
+}
+.orange {
+    color: $orange;
+}
+.blue {
+    color: $blue;
+}
+.gray {
+    color: $gray;
+}
+.tan {
+    color: $tan;
+}
+.green {
+    color: $green;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+.overflow_hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.white_background {
+    background-color: white;
+    &:last-child {
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+}
+.card {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    .row {
+        width: 100%;
+    }
+    img {
+        height: 175px;
+    }
+}
+.title {
+    color: black;
+}
+a {
+    color: $blue;
+    &:hover {
+        color: $blue;
+    }
+}
+#nav_bar {
+    height: 80px;
+}
+#logo {
+    width: 75px;
+    margin-right: 20px;
+    margin-left: -50px;
+    a {
+        font-family: 'serif';
+        font-size: 40px;
+        &:hover {
+            text-decoration: none;
+            color: $orange;
+        }
+    }
+}
+#search_bar {
+    width: 35%;
+}
+#search {
+    background-color: $button-blue;
+    font-weight: 600;
+    color: white;
+}
+.inline_ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block
+    }
+}
+#nav_buttons {
+    width: 50%;
+    ul {
+        justify-content: flex-end;
+        margin-right: -40px;
+    }
+    li {
+        padding: 0 12px;
+         &:last-child {
+             border-left: 1px solid $border-color;
+             padding: 0 10px;
+             a {
+                 color: $gray;
+                 &:hover {
+                     text-decoration: none;
+                     color: black;
+                 }
+             }
+        }
+    }
+    button {
+        color: $blue;
+        border: 1px solid $blue;
+        &:hover {
+            background-color: rgba(211, 246, 254, 0.4);
+        }
+    }
+}
+#lower_nav {
+    padding: 0 18px;
+    height: 45px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    li {
+        padding: 10px 12px;
+        a {
+            color: $gray;
+            height: 100%;
+        }
+        &:hover {
+            border-bottom: 3px solid $orange;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+main {
+    background-color: $tan;
+    padding: 20px 10px 50px 10px;
+    border-bottom: 1px solid $border-color;
+    ul {
+        list-style: none;
+        padding-left: 12px;
+        li {
+            line-height: 2em;
+            font-size: 13px;
+        }
+    }
+    .panel-body {
+        padding: 12px;
+        padding-top: 5px;
+    }
+}
+#left_column {
+    width: 18%;
+    float: left;
+    margin: 0 20px;
+    h5 {
+        font-weight: 600;
+        font-size: 13px;
+    }
+}
+#relevancy {
+    color: $blue;
+}
+form > div {
+    padding-bottom: 18px;
+    border-bottom: 1px solid $border-color;
+    font-size: 13px;
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .form-group {
+        padding: 0;
+    }
+    button {
+        margin-left: 2px;
+    }
+    #to {
+        margin: 0 6px 0 -1px;
+        padding: 5px;
+    }
+}
+#anywhere {
+    background: $blue;
+}
+.checked {
+    font-weight: 600;
+    color: black;
+}
+#colors {
+    a {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+    }
+    li {
+        height: 22px;
+        width: 22px;
+    }
+    #red {
+        background-color: #f40b32;
+    }
+    #orange {
+        background-color: #ff7f00;
+    }
+    #yellow {
+        background-color: #f3cc0c;
+    }
+    #green {
+        background-color: #0ac20a;
+    }
+    #blue {
+        background-color: #0cccf3;
+    }
+    #purple {
+        background-color: #a60cf3;
+    }
+    #black {
+        background-color: #000000;
+    }
+    #white {
+        background-color: #ffffff;
+    }
+}
+#low, #high, #ship_to {
+    font-size: 13px;
+}
+#results_section {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.caret {
+    color: #cbccc9;
+}
+.sort {
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+#searchResults {
+    margin-bottom: 10px;
+    .row {
+        margin: 0;
+        padding: 5px 0 0 0;
+        font-size: 12px;
+        &:first-child {
+            padding: 0;
+        }
+    }
+    img {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+}
+nav {
+    margin-top: -10px;
+}
+.pagination {
+    li {
+        a {
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+#finds {
+    margin: 5px 0 30px 0;
+}
+#subscribe_bar {
+    width: 30%;
+    margin: 0 auto;
+}
+#subscribe {
+    background-color: $button-blue;
+    color: white;
+}
+footer {
+    background-color: $tan;
+    padding: 20px 0;
+    font-size: 12px;
+    h5 {
+        font-weight: 600;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            line-height: 2em;
+        }
+        a {
+            color: black;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+#open {
+    background-color: $button-blue;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.footer_column {
+    width: 20%;
+    padding: 10px;
+    float: left;
+}
+#footer_bottom {
+    padding: 20px;
+}
+#footer_left {
+    button {
+        background-color: transparent;
+        margin-top: 10px;
+        font-size: 13px;
+        img {
+            width: 20px;
+            margin-right: 2px;
+        }
+    }
+}
+#footer_right {
+    li {
+        padding: 10px;
+        button {
+            width: 90px;
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+        }
+    }
+}
