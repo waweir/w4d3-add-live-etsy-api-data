@@ -1,4 +1,4 @@
-fetch('http://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('vintage+board+games') + '&includes=Images,Shop'))
+fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('vintage+board+games') + '&includes=Images,Shop'))
     .then(response => response.json())
     .then(response => createResultCard(response.results))
 
@@ -74,7 +74,7 @@ function search() {
     document.querySelector('#searchResults').innerHTML = ''
     var searchTerm = document.querySelector('#search_input').value
 
-    fetch('http://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchTerm) + '&includes=Images,Shop'))
+    fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchTerm) + '&includes=Images,Shop'))
         .then(response => response.json())
         .then(response => createResultCard(response.results))
 }
