@@ -56,7 +56,7 @@ function createResultCard(itemsArray) {
         var col3 = col2.cloneNode(true)
         col2.classList.add('text-muted')
         col2.classList.add('overflow_hidden')
-        col2.innerHTML = item.Shop.login_name
+        col2.innerHTML = item.Shop.shop_name
         col3.innerHTML = ('$' + Number(item.price).toFixed(2))
         col3.classList.add('green')
         col3.classList.add('text-right')
