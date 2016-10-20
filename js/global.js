@@ -1,6 +1,12 @@
-fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('vintage+board+games') + '&includes=Images,Shop'))
-    .then(response => response.json())
-    .then(response => createResultCard(response.results))
+function getEtsyData(keywords) {
+    fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(keywords) + '&includes=Images,Shop'))
+        .then(response => response.json())
+        .then(data => createResultCard(data.results))
+}
+
+// fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('vintage+board+games') + '&includes=Images,Shop'))
+//     .then(response => response.json())
+//     .then(response => createResultCard(response.results))
 
 function createResultCard(itemsArray) {
     itemsArray.forEach(function(item) {
@@ -61,6 +67,8 @@ function createResultCard(itemsArray) {
     })
 }
 
+getEtsyData('vintage board games')
+
 // select search button and add event listener
 var searchButton = document.querySelector('#search')
 searchButton.addEventListener('click', search)
@@ -73,10 +81,11 @@ searchInput.addEventListener('keypress', searchEnter)
 function search() {
     document.querySelector('#searchResults').innerHTML = ''
     var searchTerm = document.querySelector('#search_input').value
+    getEtsyData(searchTerm)
 
-    fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchTerm) + '&includes=Images,Shop'))
-        .then(response => response.json())
-        .then(response => createResultCard(response.results))
+    // fetch('https://thinksaydo.com/tiyproxy.php?url=' + encodeURIComponent('https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchTerm) + '&includes=Images,Shop'))
+    //     .then(response => response.json())
+    //     .then(response => createResultCard(response.results))
 }
 
 function searchEnter(event) {
